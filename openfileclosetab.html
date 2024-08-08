@@ -2,18 +2,14 @@
 <h1>Hello </h1>
 <script>
 // Function to open a new tab and close the current one
-function openNewAndCloseOld() {
-    // Store reference to the current window
-    var currentWindow = window;
+// Check if this script is running in the new tab
+if (window.opener) {
+    // Close the original tab
+    window.opener.close();
 
-    // Open the link in a new window/tab
-    var newWindow = window.open('https://www.example.com', '_blank');
-
-    // Attempt to close the current window
-    currentWindow.close();
+    // Perform other actions specific to the new tab
+    console.log("This is the new tab, and the original tab has been closed.");
 }
 
-// Automatically run the function when the page loads
-window.onload = openNewAndCloseOld;
 
 </script>
