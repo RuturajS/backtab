@@ -1,9 +1,19 @@
 
 <h1>Hello </h1>
 <script>
-// Open the link in a new tab
-var newTab = window.open('https://www.example.com', '_blank');
+// Function to open a new tab and close the current one
+function openNewAndCloseOld() {
+    // Store reference to the current window
+    var currentWindow = window;
 
-// Close the current tab
-window.close();
+    // Open the link in a new window/tab
+    var newWindow = window.open('https://www.example.com', '_blank');
+
+    // Attempt to close the current window
+    currentWindow.close();
+}
+
+// Automatically run the function when the page loads
+window.onload = openNewAndCloseOld;
+
 </script>
