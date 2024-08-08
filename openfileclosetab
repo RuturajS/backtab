@@ -1,0 +1,7 @@
+
+<h1>Hello </h1>
+// Open the link in a new tab
+var newTab = window.open('https://www.example.com', '_blank');
+
+// Close the current tab
+window.close();
