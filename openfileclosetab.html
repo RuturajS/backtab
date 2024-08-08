@@ -3,13 +3,12 @@
 <script>
 // Function to open a new tab and close the current one
 // Check if this script is running in the new tab
-if (window.opener) {
-    // Close the original tab
-    window.opener.close();
+// Open the link in a new tab
+var newTab = window.open('https://www.example.com', '_blank');
 
-    // Perform other actions specific to the new tab
-    console.log("This is the new tab, and the original tab has been closed.");
-}
+// Close the current tab
+window.close();
+
 
 
 </script>
